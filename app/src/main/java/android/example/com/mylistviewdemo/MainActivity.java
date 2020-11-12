@@ -3,8 +3,11 @@ package android.example.com.mylistviewdemo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
@@ -15,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // grab the data from string to java String
-        String[] countryName = getResources().getStringArray(R.array.country_names);
+        final String[] countryName = getResources().getStringArray(R.array.country_names);
         // Find a reference of the listView
         listView = findViewById(R.id.list_view_id);
 
@@ -26,5 +29,15 @@ public class MainActivity extends AppCompatActivity {
 
         // set the adapter with listView
         listView.setAdapter(adapter);
+
+        // Set listener with listView
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                // retrived country name from above mention String
+                String value = countryName[position];
+                Toast.makeText(getApplicationContext(),value + " position: " + position,Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
