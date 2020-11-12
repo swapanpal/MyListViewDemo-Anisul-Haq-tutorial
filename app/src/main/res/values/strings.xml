@@ -15,4 +15,19 @@
         <item>Japan</item>
         <item>Kenya</item>
     </string-array>
+
+    <string-array name="country_decs">
+        <item>Australia is a rich country</item>
+        <item>Bangladesh is my homeland</item>
+        <item>Bhutan is a beautiful country</item>
+        <item>Canada is a calm country</item>
+        <item>Denmark is my love</item>
+        <item>Egypt is a muslim country</item>
+        <item>Finland is a cool country</item>
+        <item>Germany where i wants to go</item>
+        <item>Honduras is an african country</item>
+        <item>India is a big country</item>
+        <item>Japan is a eastern country</item>
+        <item>Kenya is a poor country</item>
+    </string-array>
 </resources>
