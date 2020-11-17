@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public class CustomAdapter extends BaseAdapter {
     Context context;
     String[] countryName;
